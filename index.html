@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="" type="image/x-icon" />
+    <title>Bookmarker</title>
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- ============== font awesome css ==============  -->
+    <link rel="stylesheet" href="./css/all.min.css" />
+
+    <!-- ============== sweet alert css ==============  -->
+    <link rel="stylesheet" type="text/css" href="https://common.olemiss.edu/_js/sweet-alert/sweet-alert.css">
+
+    <!-- ============== bootstrap css ==============  -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+
+    <!-- ============== custome  css ==============  -->
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <h1>Bookmarker</h1>
+    <div class="container">
+      <div class="form">
+        <h2>
+          <i class="fa-solid fa-bookmark px-1"></i>Bookmark your favorite
+          sites<i class="fa-solid fa-bookmark ps-1"></i>
+        </h2>
+        <label for="siteNameInput" class="pb-2">
+          <i class="fa-solid fa-book-bookmark"></i> Site Name
+        </label>
+        <input
+          type="text"
+          id="siteNameInput"
+          placeholder="Bookmark Name"
+          class="form-control mb-4"
+          oninput="validatename()"
+        />
+        <label for="siteUrlInput" class="py-2">
+          <i class="fa-solid fa-link"></i> Site URL
+        </label>
+        <input
+          type="url"
+          id="siteUrlInput"
+          class="form-control"
+          placeholder="Website URL"
+          oninput="validateUrl()"
+         
+        />
+        <p class=" text-danger d-none">*follow this form http://www.google.com  </p>
+        <button
+          
+          class="btn btn-primary mt-4 mb-3 btn-lg d-block m-auto"
+          id="submitButton"
+        >
+          sumbit
+        </button>
+        <button
+          
+          class="btn btn-primary mt-4 mb-3 btn-lg d-block m-auto d-none"
+          id="updateButton"
+        >
+          Update
+        </button>
+      </div>
+
+      <div class="mt-5">
+        <input
+         
+          type="search"
+          placeholder="Search here .  .  ."
+          class="form-control w-50 mx-auto mt-5 search"
+          id="searchSite"
+        />
+        <p class=" text-danger  w-50 mx-auto d-none ">*invalid URL Name </p>
+        <table class="table text-center mt-5">
+          <thead>
+            <th>Index</th>
+            <th>Website Name</th>
+            <th>Visit</th>
+            <th>Update</th>
+            <th>Delete</th>
+          </thead>
+          <tbody id="tableBody"></tbody>
+        </table>
+      </div>
+    </div>
+   
+
+    
+
+
+
+    <!-- ============== bootstrap js ==============  -->
+    <script src="./js/bootstrap.bundle.js"></script>
+      <!-- ============== sweet alert js ==============  -->
+      <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+
+
+
+    <!-- ============== custome js ==============  -->
+    <script src="./js/main.js"></script>
+   
+  </body>
+</html>
